@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>
+        function Form() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+        }
+
+        function Login() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            if (username === "telkom" && password === "123") {
+                // login berhasil
+                document.getElementById("message").innerHTML = 
+                "<div class='alert alert-success'>Login Berhasil</div>";
+            } else {
+                // login gagal
+                document.getElementById("message").innerHTML = 
+                "<div class='alert alert-danger'>Login Gagal</div>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- card menhitung luas segitiga -->
+    <div class="card col-lg-3 col-md-6 m-2">
+        <!-- card header -->
+        <div class="card-header bg-primary">
+            <h3 class="text-white">LOGIN FORM</h3>
+        </div>
+
+        <!-- card body -->
+        <div class="card-body">
+            Username
+            <input type="text" class="form-control mb-2" id="username" />
+
+            Password
+            <input type="password" class="form-control mb-2" id="password">
+            
+            <button class="btn btn-primary btn-block" onclick="Login()">
+                LOGIN
+            </button>
+        </div>
+
+        <!-- card footer -->
+        <div class="card-footer" id="message">
+            <!-- letak alert -->
+        </div>
+    </div>
+</body>
+</html>
